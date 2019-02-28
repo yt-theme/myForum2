@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>forum</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 微软雅黑; font-size: 14px;}
+        a {text-decoration: none;}
+    </style>
+    <link type="text/css" rel="styleSheet" href="./css/public.css"/>
+</head>
+<body id="body">
+    <!-- header -->
+    <div class="w_100vw bgc_f2f2f2 box_shadw_777 flex flex_just_betw flex_alig_cent h_41px">
+        <!-- header left -->
+        <div class="h_100 flex">
+            <!-- logo -->
+            <h4 class="bgc_e7e7e7 padd_8px color_4788bc h_100 flex flex_alig_cent flex_just_cent" onclick="clickLogo()">未命名论坛</h4>
+            <select onchange="headerSelectForum_change(this)" id="headerSelectForum" class="bor_0 appearance_n padd_8px pos_r h_100 color_858585 text_cent">
+                <option>Home</option>
+                <option>Electric</option>
+                <option>Talk</option>
+            </select>
+        </div>
+        <!-- header right -->
+        <div class="flex flex_alig_cent">
+            <!-- login -->
+            <div class="">
+                <a onclick="loginShow()" id="loginButton" class="cur_p color_858585 d_n" href="javascript:void(0)">登录</a>
+                <a onclick="logout()" id="logoutButton" class="cur_p color_858585 d_n" href="javascript:void(0)">退出</a>
+            </div>
+            <!-- header time -->
+            <div class="w_200px h_100 padd_8px color_4788bc text_right">
+                <span id="hederTime"></span>
+            </div>
+        </div>
+        <!-- 通知组件 -->
+        <div class="pos_a t_0 l_0" id="popMessageComp"></div>
+    </div>
+    <!-- main -->
+    <div id="main" class="pos_r h_main over_f">
+        <div class="flex w_100vw h_100">
+            <!-- 帖列表组件 -->
+            <div class="articleList_left pos_r marg_t_8px" id="articleList"></div>
+            <!-- 功能组件 -->
+            <div class="pos_r w_20" id="mainPage_toy"></div>
+        </div>
+        <!-- 登录组件 -->
+        <div class="pos_a t_0 l_0 w_100 h_100" id="loginContent"></div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/components.js"></script>
+    <script src="./js/router.js"></script>
+</body>
+</html>
