@@ -7,7 +7,7 @@ import (
 )
 
 func HandlePool(w http.ResponseWriter, r *http.Request) {
-	sql1 := "select id,name,passwd from users"
+	sql1 := "select ?,?,? from users"
 	ret := db.DbQuery(sql1)
 	fmt.Println("ret", ret[0]["id"])
 }
